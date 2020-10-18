@@ -1,33 +1,22 @@
-Understanding Idempotence
-=========================
+Install puppet
+==============
 
-* Create the following manifest:
-
-```puppet
-    node default {
-    	file { '/etc/puppet_exercise_00': #the path of the new file
-    		ensure => 'present',
-    		content => 'this is the content', #this text will be inside the file
-    		owner => 'root',
-    		group => 'root',
-    		mode => '0644',
-    	}
-    }
+* Install puppet
+```console
+$ sudo apt install puppet puppet-master
 ```
 
-and name it exercise00.pp
+* Check that puppet master is running
+```console
+$ ps -ef | grep puppet
+```
 
-* Apply the manifest
-	sudo puppet apply 
+* Check that the system service manager knows about puppet
+```console
+$ systemctl status puppet-master.service
+```
 
-* Check that the file `/etc/puppet_exercise_00` exists and has the right content.
-
-* Apply the manifest again.
-
-* Check that the file did not change.
-
-* Change the content of the file.
-
-* Apply the manifest again.
-
-* Check that the content of the file reverted to the correct content.
+* Find the version of puppet client you have:
+```console
+$ puppet --version
+```

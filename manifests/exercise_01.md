@@ -1,6 +1,7 @@
-Create and run your first manifest
+Understanding Idempotence
+=========================
 
-* Create and run your first manifest
+* Create the following manifest:
 
 ```puppet
     node default {

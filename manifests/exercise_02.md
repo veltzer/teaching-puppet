@@ -1,26 +1,32 @@
-Creating users with puppet
-==========================
+Create and run your first manifest
 
-* Create a manifest like this:
+* Create and run your first manifest
 
 ```puppet
-    user { 'joe':
-    	ensure => present,
-    	uid => 2000,
-    	gid => 10,
-    	comment => 'Joe User',
-    	managehome => true,
+    node default {
+    	file { '/etc/puppet_exercise_00': #the path of the new file
+    		ensure => 'present',
+    		content => 'this is the content', #this text will be inside the file
+    		owner => 'root',
+    		group => 'root',
+    		mode => '0644',
+    	}
     }
 ```
 
-and name it `user.pp`
+and name it exercise00.pp
 
 * Apply the manifest
+	sudo puppet apply 
 
-```console
-mark@gandalf:~$ sudo puppet apply user.pp
-```
+* Check that the file `/etc/puppet_exercise_00` exists and has the right content.
 
-* Check that the user `joe` was indeed created.
+* Apply the manifest again.
 
-TBD
+* Check that the file did not change.
+
+* Change the content of the file.
+
+* Apply the manifest again.
+
+* Check that the content of the file reverted to the correct content.
