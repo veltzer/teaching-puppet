@@ -20,3 +20,18 @@ $ systemctl status puppet-master.service
 ```console
 $ puppet --version
 ```
+
+* Bonus: install vim syntax highlighting (for vim fanatics)
+```console
+$ sudo apt-get install vim-puppet
+$ vim-addons install puppet
+```
+
+* Check that vim syntax highlighting is working by creating a file like this with vim:
+```puppet
+  notify { 'greeting':
+    message => 'Hello, world!',
+  }
+```
+
+and seeing if vim gives you syntax highlighting...
