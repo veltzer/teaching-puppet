@@ -1,2 +1,2 @@
 #!/bin/sh
-sudo apt install puppet puppetmaster
+sudo apt install puppet puppet-master
