@@ -24,6 +24,9 @@ $ puppet --version
 * Bonus: install vim syntax highlighting (for vim fanatics)
 ```console
 $ sudo apt-get install vim-puppet
+```
+and
+```console
 $ vim-addons install puppet
 ```
 
