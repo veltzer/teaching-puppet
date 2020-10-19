@@ -16,6 +16,8 @@ $ ps -ef | grep puppet
 $ systemctl status puppet-master.service
 ```
 
+* Check that the master is listening on the puppet port (8140):
+
 * Find the version of puppet client you have:
 ```console
 $ puppet --version
