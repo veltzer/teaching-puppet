@@ -2,16 +2,15 @@ Creating users with puppet
 ==========================
 
 * Create a manifest `user.pp` with the following content:
-
-```puppet
-user { 'joe':
-	ensure => present,
-	uid => 2000,
-	gid => 10,
-	comment => 'Joe User',
-	managehome => true,
-}
-```
+	```puppet
+	user { 'joe':
+		ensure => present,
+		uid => 2000,
+		gid => 10,
+		comment => 'Joe User',
+		managehome => true,
+	}
+	```
 
 * Apply the manifest
 
