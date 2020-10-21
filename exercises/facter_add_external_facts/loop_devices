@@ -1,0 +1,3 @@
+#!/bin/sh
+loop_devices=$(ls -d /sys/block/loop? | wc -l)
+echo "loop_devices=${loop_devices}"
