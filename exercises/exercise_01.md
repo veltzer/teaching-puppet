@@ -2,7 +2,6 @@ Understanding Idempotence
 =========================
 
 * Create the following manifest:
-
 ```puppet
 file { '/etc/puppet_exercise_00': #the path of the new file
 	ensure => 'present',
