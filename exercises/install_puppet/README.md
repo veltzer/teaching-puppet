@@ -35,7 +35,7 @@ $ vim-addons install puppet
 * Check that vim syntax highlighting is working by creating a file like this with vim:
 ```puppet
   notify { 'greeting':
-    message => 'Hello, world!',
+    message => 'Hello, Puppet!',
   }
 ```
 

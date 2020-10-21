@@ -1,7 +1,7 @@
 Create and run your first manifest
 ==================================
 
-* Create a manifest like this:
+* Create a manifest `first_manifest.pp` with the following content:
 ```puppet
     node default {
     	file { '/etc/puppet_exercise_00': #the path of the new file
@@ -13,8 +13,6 @@ Create and run your first manifest
     	}
     }
 ```
-
-and name it exercise00.pp
 
 * Apply the manifest
 	sudo puppet apply 
