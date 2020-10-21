@@ -2,33 +2,33 @@ Install puppet
 ==============
 
 * Install puppet
-```console
+```shell
 $ sudo apt install puppet puppet-master
 ```
 
 * Check that puppet master is running
-```console
+```shell
 $ ps -ef | grep puppet
 ```
 
 * Check that the system service manager knows about puppet
-```console
+```shell
 $ systemctl status puppet-master.service
 ```
 
 * Check that the master is listening on the puppet port (8140):
 
 * Find the version of puppet client you have:
-```console
+```shell
 $ puppet --version
 ```
 
 * Bonus: install vim syntax highlighting (for vim fanatics)
-```console
+```shell
 $ sudo apt-get install vim-puppet
 ```
 and
-```console
+```shell
 $ vim-addons install puppet
 ```
 

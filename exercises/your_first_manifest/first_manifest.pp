@@ -2,16 +2,14 @@ Your first puppet manifest
 ==========================
 
 * Create a manifest like this:
-
-```puppet
-  notify { 'greeting':
-    message => 'Hello, world!',
-  }
-```
-
-and name it `hello.pp`
+  ```puppet
+    notify { 'greeting':
+      message => 'Hello, world!',
+    }
+  ```
+  and name it `hello.pp`
 
 * Apply it with:
-```console
-foo@bar:~$ puppet apply
-```
+  ```shell
+  foo@bar:~$ puppet apply
+  ```

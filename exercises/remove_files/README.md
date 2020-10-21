@@ -2,7 +2,7 @@ Remove files
 ============
 
 * create a file `/etc/remove_file_exercise` as root like this:
-```console
+```shell
 $ sudo touch /etc/remove_file_exercise
 ```
 
