@@ -13,20 +13,19 @@ Creating users with puppet
 	```
 
 * Apply the manifest
-
-```shell
-$ sudo puppet apply user.pp
-```
+	```shell
+	$ sudo puppet apply user.pp
+	```
 
 * Check that the user `joe` was indeed created.
-```shell
-$ getent passwd joe
-```
-The users details should show up.
+	```shell
+	$ getent passwd joe
+	```
+	The users details should show up.
 
 * Self exercise with no instructions: remove the user you created
 
 * Check that the user no longer exists by getting no output from the command:
-```shell
-$ getenv passwd joe
-```
+	```shell
+	$ getenv passwd joe
+	```
