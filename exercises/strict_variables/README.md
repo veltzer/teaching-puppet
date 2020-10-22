@@ -2,17 +2,17 @@ Use strict variables
 ====================
 
 * Create the following manifest:
-```puppet
-file { '/etc/test.${extension}':
-  ensure => present,
-}
-```
-and name it `strict_variables.pp`
+	```puppet
+	file { '/etc/test.${extension}':
+	  ensure => present,
+	}
+	```
+	and name it `strict_variables.pp`
 
 * Apply it:
-```shell
-$ puppet apply strict_variblaes.pp
-```
+	```shell
+	$ puppet apply strict_variblaes.pp
+	```
 
 * What file was created? What did you learn from this?
 
@@ -21,10 +21,10 @@ $ puppet apply strict_variblaes.pp
 * Re apply the manifest and see that all is well.
 
 * add
-```
-strict_variables = true
-```
-to your puppet config file at `~/.puppt/pupput.conf`
+	```
+	strict_variables = true
+	```
+	to your puppet config file at `~/.puppt/pupput.conf`
 
 * remove the declaration of the `extension`
 

@@ -27,6 +27,6 @@ Use a ruby function in your manifest
 	```
 
 * Apply the resource and see if your function works.
-```shell
-$ puppet apply use_upcaser.pp
-```
+	```shell
+	$ puppet apply use_upcaser.pp
+	```

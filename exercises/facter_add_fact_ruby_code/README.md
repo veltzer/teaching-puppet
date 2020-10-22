@@ -41,4 +41,3 @@ Add USB info as Facter fact
 	```shell
 	$ sudo -E /opt/puppetlabs/bin/puppet apply test_shell_number.pp
 	```
-
