@@ -1,0 +1,9 @@
+FROM ubuntu:18.04
+RUN apt-get update
+RUN apt-get -qy install wget
+RUN wget "https://apt.puppet.com/puppet-release-bionic.deb" -P /tmp
+RUN dpkg -i "/tmp/puppet-release-bionic.deb"
+RUN apt-get update
+RUN apt-get -qy install puppetserver
+# make it autosign
+CMD ["/opt/puppetlabs/bin/puppetserver", "start"]

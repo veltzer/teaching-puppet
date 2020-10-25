@@ -3,3 +3,5 @@
 - exercise: using facter
 	write a manifest that only installs the memcache package
 	if you have more than 10 Gib of ram.
+- exercise where you download a puppet module and identify interesting parts
+	in it.
