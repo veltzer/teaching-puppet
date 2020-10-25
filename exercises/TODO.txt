@@ -1,2 +1,5 @@
 - configure puppet.conf and see the configuration
 - create new environments and use them.
+- exercise: using facter
+	write a manifest that only installs the memcache package
+	if you have more than 10 Gib of ram.

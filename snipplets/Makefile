@@ -1,5 +1,6 @@
 
 SOURCES=user.rb
+OPTS=-O "fontface=Fira Code,fontsize=26,line_numbers=False"
 
 OUT_SVG=$(addsuffix .svg, $(basename $(SOURCES)))
 OUT_JPG=$(addsuffix .jpg, $(basename $(SOURCES)))
@@ -18,16 +19,16 @@ ALL+=$(OUT_RTF)
 .PHONY: all
 all: $(ALL)
 
-$(OUT_SVG): %.svg: %.rb
-	pygmentize -f svg -o $@ $<
-$(OUT_JPG): %.jpg: %.rb
-	pygmentize -f jpg -o $@ $<
-$(OUT_HTM): %.htm: %.rb
-	pygmentize -f html -o $@ $<
-$(OUT_PNG): %.png: %.rb
-	pygmentize -f png -o $@ $<
-$(OUT_RTF): %.rtf: %.rb
-	pygmentize -f rtf -o $@ $<
+$(OUT_SVG): %.svg: %.rb Makefile
+	pygmentize -f svg $(OPTS) -o $@ $<
+$(OUT_JPG): %.jpg: %.rb Makefile
+	pygmentize -f jpg $(OPTS) -o $@ $<
+$(OUT_HTM): %.htm: %.rb Makefile
+	pygmentize -f html $(OPTS) -o $@ $<
+$(OUT_PNG): %.png: %.rb Makefile
+	pygmentize -f png $(OPTS) -o $@ $<
+$(OUT_RTF): %.rtf: %.rb Makefile
+	pygmentize -f rtf $(OPTS) -o $@ $<
 
 .PHONY: debug
 debug:
