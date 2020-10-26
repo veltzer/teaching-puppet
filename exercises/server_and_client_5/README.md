@@ -25,38 +25,25 @@ We will use one machine to act both as master and as agent.
 	```shell
 	export RUBYOPT="-W0"
 	```
+	add this to .bashrc of the root account as well
 
-* Add the names `puppermaster` and `puppetagent` by adding the line:
-	```text
-	127.0.0.1	puppetmaster puppetagent
-	```
-	to `/etc/hosts`
-
-* Check that you can use the names `puppermaster` and `puppeagent` by doing
+* Examine your clients configuration using:
 	```shell
-	$ ping puppetmaster
+	puppet config print
+	```
+
+* Sign the agent by the server.
+	Use the commands
+	```shell
+	$ puppet agent --waitforcert 60 --test
 	```
 	and
 	```shell
-	$ ping puppetagent
+	$ puppet cert ...
 	```
+	and configure the client and server to find each other
 
-* Check that you have the master running
-	```shell
-	$ ps -ef | grep master
-	puppet    973317       1  0 04:38 ?        00:00:03 /usr/bin/ruby /usr/bin/puppet master
-	```
-
-* Configure the agent to connet to a master called puppetmaster
-
-* Connect from the agent
-	```shell
-	$ puppet agent --server puppetmaster --waitforcert 60 --test
-	```
-
-* Sign the request from the client.
-
-* Run the agent again.
+* Run the agent for real:
 	```shell
 	$ puppet agent --no-daemonize --debug
 	```
