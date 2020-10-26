@@ -1,3 +1,10 @@
-got to 5gb with everything - get 10
-user data script is here
+got to 5gb with everything - get 8 which is the default.
 get 5xlarge size (4 cores 8 gig ram)
+============userdata============
+#!/bin/sh
+apt-get -y update
+apt-get -y dist-upgrade
+apt-get -y install docker.io
+usermod -aG docker ubuntu
+reboot
+================================
