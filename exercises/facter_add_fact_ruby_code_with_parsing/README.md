@@ -1,4 +1,4 @@
-Add USB info as Facter fact
+Add PCI info as Facter fact
 ===========================
 
 * Create a folder in your home directory called "myfacts"
