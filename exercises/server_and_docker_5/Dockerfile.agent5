@@ -1,0 +1,9 @@
+FROM ubuntu:18.04
+RUN apt-get update
+RUN apt-get -y dist-upgrade
+RUN apt-get -y install puppet
+RUN echo "[main]" > /etc/puppet/puppet.conf
+RUN echo "certname=puppetagent" >> /etc/puppet/puppet.conf
+RUN puppet agent --no-daemonize -t
+RUN echo "runinterval=30s" >> /etc/puppet/puppet.conf
+CMD ["puppet", "agent", "--no-daemonize", "--debug"]
