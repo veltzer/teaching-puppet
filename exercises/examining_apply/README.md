@@ -16,6 +16,7 @@ The idea of this exercise is to teach you how to see exactly what puppet is doin
 	* verbose
 	* detailed-exitcodes
 	* test
+	
 	Always reverting with:
 	```shell
 	$ sudo dpkg --purge xbill
