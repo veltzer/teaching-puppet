@@ -3,13 +3,13 @@ Add USB info as Facter fact
 
 * Create a folder in your home directory called "myfacts"
 
-* Create a file called `usb.rb` with the following content:
+* Create a file called `pci.rb` with the following content:
 	```ruby
-	# usb.rb
+	# pci.rb
 
-	Facter.add('usb') do
+	Facter.add('pci') do
 	  setcode do
-	    Facter::Core::Execution.execute('lsusb')
+	    Facter::Core::Execution.execute('lspci')
 	  end
 	end
 	```
@@ -22,8 +22,12 @@ Add USB info as Facter fact
 
 * See that Facter knows about your fact:
 	```shell
-	$ facter usb
+	$ facter pci
 	```
 
-* Use the new fact in a manifest
-	TBD
+* This is the hard part: write some ruby code to parse the output and create a hash map
+	type data structure and not just return the entire output of lspci
+	(this means change the ruby code above).
+	You will need some ruby knowledge to do this.
+
+* Now create a puppet manifest that prints the name of your network card.

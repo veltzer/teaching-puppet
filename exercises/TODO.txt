@@ -1,3 +1,8 @@
+- add vim syntax highlighting exercise.
+- no perfect idempotence exercise.
+- first module exercise.
+- master and client with docker exercise.
+
 - configure puppet.conf and see the configuration
 - create new environments and use them.
 - exercise: using facter
