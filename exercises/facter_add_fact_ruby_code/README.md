@@ -1,5 +1,5 @@
-Add USB info as Facter fact
-===========================
+Using Ruby to add facts to facter
+=================================
 
 * Create a folder in your home directory called "myfacts"
 
@@ -9,7 +9,8 @@ Add USB info as Facter fact
 
 	Facter.add('shell_number') do
 		setcode do
-			line_count = 0 #  w  w w  . j a v a2s  .co  m
+			text = ''
+			line_count = 0
 			File.open('/etc/shells').each do |line|  
 				line_count += 1 
 				text << line 
@@ -27,7 +28,7 @@ Add USB info as Facter fact
 
 * See that Facter knows about your fact:
 	```shell
-	$ facter usb
+	$ facter shell_number
 	```
 
 * Use the new fact in a manifest
@@ -39,5 +40,6 @@ Add USB info as Facter fact
 
 * Apply the manifest with:
 	```shell
-	$ sudo -E /opt/puppetlabs/bin/puppet apply test_shell_number.pp
+	$ sudo -E puppet apply test_shell_number.pp
 	```
+	The -E is to have the puppet subprocess have access to the FACTERLIB environment variable.
