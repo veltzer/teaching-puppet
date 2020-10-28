@@ -1,12 +1,11 @@
 - add vim syntax highlighting exercise.
 - no perfect idempotence exercise.
-- first module exercise.
-- master and client with docker exercise.
-
 - configure puppet.conf and see the configuration
 - create new environments and use them.
-- exercise: using facter
-	write a manifest that only installs the memcache package
-	if you have more than 10 Gib of ram.
-- exercise where you download a puppet module and identify interesting parts
-	in it.
+
+modules:
+- first module exercise.
+- module with parameter exercise.
+- add facter fact and use it in your module:
+	install mysql and give it 90 perfent of your RAM.
+- examine the java standard puppet module.
