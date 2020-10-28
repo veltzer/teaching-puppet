@@ -9,3 +9,8 @@ modules:
 - add facter fact and use it in your module:
 	install mysql and give it 90 perfent of your RAM.
 - examine the java standard puppet module.
+
+today:
+- two modules exercise in environment. they should use each other.
+- rspec exercise.
+- hydra slides and exercise.
