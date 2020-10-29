@@ -1,0 +1,25 @@
+
+
+	Imagine we have software called "foo" made up of two files:
+		/usr/bin/foo <- this is the actualy executable
+		/etc/foo.conf <- this is the config file for the executable
+				without it the program crashes
+
+	We want the following:
+		**IF** we install software "bar" we want to change the behaviour of foo.
+
+		If the installtion of "bar" actually changes "/etc/foo.conf" then we
+		a problem.
+		Why? Because it will change the md5 (checksum) of the /etc/foo.conf file
+		which will trigger a warning.
+
+	What if we have another software called "zoo" and installing it should *ALSO*"
+		change the behaviour of "foo"
+
+
+				foo
+				/etc/foo.conf which includes /etc/foo.d/*
+				/etc/foo.d
+
+			bar		zoo
+			/etc/foo.d/bar		/etc/foo.d/zoo
