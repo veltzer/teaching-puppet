@@ -1,5 +1,6 @@
 - add vim syntax highlighting exercise.
 - no perfect idempotence exercise.
+	mess up installed package.
 - configure puppet.conf and see the configuration
 - create new environments and use them.
 
