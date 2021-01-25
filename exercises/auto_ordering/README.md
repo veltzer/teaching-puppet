@@ -21,7 +21,7 @@ and name it `user_group.pp`
 
 * Apply the manifest
 
-```shell
+```bash
 sudo puppet apply user_group.pp
 ```
 
