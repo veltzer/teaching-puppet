@@ -15,6 +15,7 @@ node default {
 ```
 
 * Apply the manifest
+
 ```shell
 	sudo puppet apply 
 ```
