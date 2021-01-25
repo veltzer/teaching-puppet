@@ -2,6 +2,7 @@ Create and run your first manifest
 ==================================
 
 * Create a manifest `first_manifest.pp` with the following content:
+
 ```puppet
 node default {
 	file { '/etc/puppet_exercise_00': #the path of the new file
