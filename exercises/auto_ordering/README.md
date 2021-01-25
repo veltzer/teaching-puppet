@@ -22,7 +22,7 @@ and name it `user_group.pp`
 * Apply the manifest
 
 ```shell
-$ sudo puppet apply user_group.pp
+sudo puppet apply user_group.pp
 ```
 
 * In what order did puppet create the two resources? Is it in the order of the file? What do you deduce from this?
