@@ -1,6 +1,3 @@
-
-
-
 - create a module that install the xbill package.
 - lets imagine that xbill has a config file called /etc/xbill.conf
 - install this /etc/xbill file *after* installing the package 'xbill'.
