@@ -10,7 +10,6 @@ Your first usable module
 * in that file demostate how to use your class.
 * run your module and show it works.
 
-
 This should be the structure of your module:
  ── my_notifier
     ├── examples
