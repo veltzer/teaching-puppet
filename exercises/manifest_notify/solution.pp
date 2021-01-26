@@ -1,15 +1,15 @@
-package { 'openssh-server':
+package { 'nginx':
   ensure => 'installed',
 }
 
-service { 'ssh':
+service { 'nginx':
   ensure => 'running',
-  require => Package['openssh-server'],
+  require => Package['nginx'],
 }
 
-file { '/etc/ssh/sshd_config.d/empty':
+file { '/etc/nginx/conf.d/puppet_teaching_empty':
+  ensure  => present,
   mode    => '0600',
   content => "",
-  require => Package['openssh-server'],
-  notify  => Service['ssh'],
+  notify  => Service['nginx'],
 }

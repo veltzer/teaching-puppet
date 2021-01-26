@@ -1,47 +1,44 @@
 Notifying package to refresh
 ============================
 
-
-NOTICE!!! This exercise talks about sshd all over. Don't use sshd, instead just
-install 'nginx' and use that as your server.
-
-DONT DO IT WITH SSH OR YOU MIGHT LOSE CONNECTION WITH YOUR MACHINE, FOREVER!!!
-
 * Many packages run as daemons and need to be refreshed if their configuration changes.
 This could be done by restarting them:
 
 ```shell
-sudo /etc/init.d/ssh restart
+sudo /etc/init.d/nginx restart
 ```
 
 or by sending them a SIGHUP signal:
+
 ```shell
-sudo kill -SIGHUP $(pgrep -f "sshd -D")
+sudo kill -SIGHUP $(pgrep -f "/sbin/nginx")
 ```
 
 or possibly other ways.
 
-* First see that you are to see when your ssh daemon refreshes.
+* First see that you are able to see when your `nginx` daemon refreshes.
 
-* In one terminal do
-
-```shell
-tail -f /var/log/auth.log
-```
-
-* In another terminal do
+* Issue:
 
 ```shell
-sudo kill -SIGHUP $(pgrep -f "sshd -D")
+echo $(pgrep -f "/sbin/nginx")
 ```
 
-* do you see when sshd restarts?
+This gives you the nginx pid.
 
-* In this exercise you need to install a new config file for sshd `/etc/ssh/sshd_config.d/empty.conf'
+* Restart nginx:
 
-* Once you do this ssh needs to be refreshed.
+```shell
+sudo /etc/init.d/nginx restart
+```
 
-* Bonus phase: can you find how ssh automatically looks at every file in `/etc/ssh/sshd_config.d`?
+* Now get the pid again and see that it changed.
 
-* Create a manifest with a file resource that, when installs, notifies the sshd server to refresh
+* In this exercise you need to install a new config file for sshd `/etc/nginx/cond.d/empty.conf'
+
+* Once you do this nginx needs to be refreshed.
+
+* Bonus phase: can you find how nginx automatically looks at every file in `/etc/nginx/conf.d`?
+
+* Create a manifest with a file resource that, when installs, notifies the `nginx` server to refresh
 itself. Search the documentation of puppet yourself.
