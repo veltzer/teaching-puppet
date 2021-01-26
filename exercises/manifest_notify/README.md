@@ -5,7 +5,7 @@ Notifying package to refresh
 This could be done by restarting them:
 
 ```shell
-sudo etc/init.d/ssh restart
+sudo /etc/init.d/ssh restart
 ```
 
 or by sending them a SIGHUP signal:
@@ -35,7 +35,7 @@ sudo kill -SIGHUP $(pgrep -f "sshd -D")
 
 * Once you do this ssh needs to be refreshed.
 
-* Bonus phase: can you find how ssh automatically looks at every file in `/etc/ssh/sshd_config`?
+* Bonus phase: can you find how ssh automatically looks at every file in `/etc/ssh/sshd_config.d`?
 
 * Create a manifest with a file resource that, when installs, notifies the sshd server to refresh
 itself. Search the documentation of puppet yourself.
