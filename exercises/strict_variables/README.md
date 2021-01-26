@@ -4,7 +4,7 @@ Use strict variables
 * Create the following `strict_variables.pp` manifest:
 
 ```puppet
-file { '/etc/test.${extension}':
+file { "/etc/test.${extension}":
   ensure => present,
 }
 ```
@@ -27,7 +27,7 @@ puppet apply strict_variblaes.pp
 strict_variables = true
 ```
 
-to your puppet config file at `~/.puppt/pupput.conf`
+to your puppet config file at `/etc/puppet/puppet.conf`
 
 * remove the declaration of the `extension`
 

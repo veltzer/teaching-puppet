@@ -1,3 +1,3 @@
-file { '/etc/test.${extension}':
+file { "/etc/test.${extension}":
   ensure =>  present,
 }
