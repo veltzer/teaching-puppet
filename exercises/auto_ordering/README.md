@@ -10,7 +10,7 @@ to put the user before the group:
 ```puppet
 user { 'test_puppet_user':
 	ensure => present,
-	uid => test_puppet_group,
+	gid => test_puppet_group,
 }
 group { 'test_puppet_group':
 	ensure => present,
