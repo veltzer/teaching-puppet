@@ -1,6 +1,12 @@
 Notifying package to refresh
 ============================
 
+
+NOTICE!!! This exercise talks about sshd all over. Don't use sshd, instead just
+install 'nginx' and use that as your server.
+
+DONT DO IT WITH SSH OR YOU MIGHT LOSE CONNECTION WITH YOUR MACHINE, FOREVER!!!
+
 * Many packages run as daemons and need to be refreshed if their configuration changes.
 This could be done by restarting them:
 
