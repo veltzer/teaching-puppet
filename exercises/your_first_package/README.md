@@ -1,7 +1,7 @@
 Run your first package manifest
 ===============================
 
-* Check that the package "xbill" is not installed using:
+* Check that the package `xbill` is not installed using:
 
 ```shell
 dpkg --status xbill
@@ -10,7 +10,7 @@ dpkg --status xbill
 * Create a manifest `package.pp` with the following content:
 
 ```puppet
-package { 'xbill':
+package { "xbill":
   ensure => installed,
 }
 ```
@@ -21,7 +21,7 @@ package { 'xbill':
 sudo puppet apply package.pp
 ```
 
-* Check that the package "xbill" was installed using
+* Check that the package `xbill` was installed using
 
 ```shell
 dpkg --status xbill

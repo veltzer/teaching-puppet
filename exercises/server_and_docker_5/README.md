@@ -9,9 +9,9 @@ We will create a agent on docker
 
 * run your docker using `run_agent5.sh`
 
-* you will need to set the name of your host and put autosign=true in /etc/puppet/puppet.conf master section.
+* you will need to set the name of your host and put `autosign=true` in `/etc/puppet/puppet.conf` master section.
 
-* you will need to add "puppet" as a name to your host in /etc/hosts
+* you will need to add `puppet` as a name to your host in `/etc/hosts`
 
 * use the cleanup script in this folder if things go wrong with signatures.
 

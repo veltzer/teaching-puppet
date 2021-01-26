@@ -14,5 +14,5 @@ and name it `hello.pp`
 * Apply it with:
 
 ```shell
-foo@bar:~$ puppet apply hello.pp
+puppet apply hello.pp
 ```
