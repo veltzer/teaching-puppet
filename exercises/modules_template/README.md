@@ -15,6 +15,8 @@ xbill_animation_speed = 50
 * Allow the user of your module to specify the "xbill_animation_speed" parameter.
 * Use templates for your solution.
 
+* this will be a use of your module:
+
 ```puppet
 xbill { "foobar":
 	xbill_animation_speed => 60,
