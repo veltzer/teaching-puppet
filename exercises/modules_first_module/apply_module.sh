@@ -1,2 +1,2 @@
 #!/bin/sh
-puppet apply --modulepath=./ notifier/tests/init.pp
+puppet apply --modulepath=./ test.pp

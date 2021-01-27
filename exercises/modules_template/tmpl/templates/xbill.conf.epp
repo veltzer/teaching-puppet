@@ -1,0 +1,3 @@
+[main]
+# frames per second
+xbill_animation_speed = <%= $animation_speed %>
