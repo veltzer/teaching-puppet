@@ -12,9 +12,11 @@ Your first usable module
 * run your module and show it works.
 
 This should be the structure of your module:
- ── notifier
+    notifier
     ├── examples
     │   └── init.pp
     ├── manifests
     │   └── init.pp
     └── metadata.json
+
+* create a manifest that uses your module. This means uses you class.
