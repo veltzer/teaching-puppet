@@ -4,7 +4,7 @@ Module using template
 * create a module that installs the `xbill` package.
 * lets imagine that `xbill` has a config file called `/etc/xbill.conf`
 * install this `/etc/xbill` file *after* installing the package `xbill`.
-* the file has the following content:
+* the file installed should have the following content:
 
 ```text
 [main]
