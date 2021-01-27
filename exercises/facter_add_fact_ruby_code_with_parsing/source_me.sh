@@ -1,0 +1,1 @@
+export FACTERLIB="${HOME}/myfacts"
