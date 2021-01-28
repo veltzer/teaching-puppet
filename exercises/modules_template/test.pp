@@ -1,3 +1,3 @@
 class { 'tmpl':
-  animation_speed =>  100
+  animation_speed => 100
 }

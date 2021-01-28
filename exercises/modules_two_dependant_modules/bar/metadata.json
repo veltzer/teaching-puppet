@@ -1,0 +1,10 @@
+{
+  "name": "bar",
+  "version": "1.0.0",
+  "author": "Mark Veltzer",
+  "summary": "Does bar",
+  "license": "Apache-2.0",
+  "source": "git://github.com/veltzer/teaching-puppet",
+  "requirements": [],
+  "dependencies": []
+}
